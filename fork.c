@@ -1,5 +1,5 @@
 /* 
-   Calculate Functions using the concept of threads
+   Calculate Functions using the concepts of threads
    By: Paulo Trindade
 
    F(x) = G(x) + H(x)
@@ -45,11 +45,11 @@ double h(double x) {
       funcaoL = l(x);
       close(tubo_pHxpIx[0]);
       write(tubo_pHxpIx[1], &funcaoL, sizeof(funcaoL));
-      printf("Função L: %.2lf\n", funcaoL);
+      printf("Function L: %.2lf\n", funcaoL);
       exit(0);
    } else {
       funcaoI = i(x);
-      printf("Função I: %.2lf\n", funcaoI);
+      printf("Function I: %.2lf\n", funcaoI);
       wait(0);
       close(tubo_pHxpIx[1]);
       read(tubo_pHxpIx[0], &funcaoL, sizeof(funcaoL));
@@ -67,7 +67,7 @@ int main() {
    int tubo_p1pGx[2];
 	
    pipe(tubo_p1pGx);
-   printf("Digite o valor de x\n");
+   printf("Value of x: ");
    scanf("%lf", &x);
   
    pid_t processoGx = fork();
@@ -77,7 +77,7 @@ int main() {
       funcaoG = g(x);
       close(tubo_p1pGx[0]);
       write(tubo_p1pGx[1], &funcaoG, sizeof(funcaoG));
-      printf("Função G: %.2lf\n", funcaoG);
+      printf("Function G: %.2lf\n", funcaoG);
       exit(0);
    } else {
       int tubo_p1pHx[2];
@@ -87,12 +87,12 @@ int main() {
          //Calculate h(x)
          funcaoH = h(x);
          close(tubo_p1pHx[0]);
-      	write(tubo_p1pHx[1], &funcaoH, sizeof(funcaoH));
-         printf("Função H: %.2lf\n", funcaoH);
+      	 write(tubo_p1pHx[1], &funcaoH, sizeof(funcaoH));
+         printf("Function H: %.2lf\n", funcaoH);
          exit(0);
       } else {
-	      wait(0);
-	      //Read h(x)
+	 wait(0);
+	 //Read h(x)
          close(tubo_p1pHx[1]);
          read(tubo_p1pHx[0], &funcaoH, sizeof(funcaoH));
       }
@@ -102,7 +102,7 @@ int main() {
       read(tubo_p1pGx[0], &funcaoG, sizeof(funcaoG));
 
       result = funcaoG + funcaoH;
-      printf("Resultado de G(x) + H(x) = %.2lf\n", result);  
+      printf("Result of G(x) + H(x) = %.2lf\n", result);  
    }
    return 0;
 }
