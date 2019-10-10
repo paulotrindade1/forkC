@@ -1,5 +1,5 @@
 /* 
-   Calculate Functions using the concepts of threads
+   Calculate Functions using the concepts of processes
    By: Paulo Trindade
 
    F(x) = G(x) + H(x)
