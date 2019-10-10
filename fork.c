@@ -22,8 +22,8 @@ double i(double x) {
 
 double l(double x) {
    int i;
-   double factorialx;
-   double factorialxx;
+   double factorialx = 1;
+   double factorialxx = 1;
    double xx = x*x;
    double result;
    double sumI;
@@ -32,18 +32,19 @@ double l(double x) {
    for (i = x; i > 0;i--){
       factorialx *= i;
    }   
-   
+   printf("Factorial x: %lf\n", factorialx);
    //Factorial x*x
    for (i = xx; i > 0;i--) {
       factorialxx *= i;	   
    }
-
+   printf("Factorial xx: %lf\n", factorialxx);
    //Sum of i
    for (i = 1; i <= x;i++) {
       sumI += (i * i);
    }
-
+   printf("Sum of i: %lf\n", sumI);
    result = (factorialx - factorialxx) / sumI;
+   printf("Result: %lf\n", result);
    return result;
 }
 
