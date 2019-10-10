@@ -6,7 +6,7 @@
    G(x) = x!
    H(x) = I(x) + L(x)
    I(x) = (x * x) / sqrt(x)
-   L(x) = not defined (default = 4)
+   L(x) = (x! - (x*x)!) / SUM(i, x) (i * i) 
 */
 
 #include <stdio.h>
