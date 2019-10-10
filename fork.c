@@ -1,8 +1,8 @@
 /* 
-   Calculate Functions using the concepts of processes
-   By: Paulo Trindade
+   Calculate functions using the concepts of processes
 
    F(x) = G(x) + H(x)
+   
    G(x) = x!
    H(x) = I(x) + L(x)
    I(x) = (x * x) / sqrt(x)
