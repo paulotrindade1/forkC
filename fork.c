@@ -21,7 +21,30 @@ double i(double x) {
 }
 
 double l(double x) {
-   return 4;
+   int i;
+   double factorialx;
+   double factorialxx;
+   double xx = x*x;
+   double result;
+   double sumI;
+
+   //Factorial x
+   for (i = x; i > 0;i--){
+      factorialx *= i;
+   }   
+   
+   //Factorial x*x
+   for (i = xx; i > 0;i--) {
+      factorialxx *= i;	   
+   }
+
+   //Sum of i
+   for (i = 1; i <= x;i++) {
+      sumI += (i * i);
+   }
+
+   result = (factorialx - factorialxx) / sumI;
+   return result;
 }
 
 double g(double x) {
