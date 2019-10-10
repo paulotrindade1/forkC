@@ -62,7 +62,8 @@ double h(double x) {
    double funcaoL;
    double result;
    int tubo_pHxpIx[2];
-
+   
+   pipe(tubo_pHxpIx);
    pid_t processoLx = fork();
    
    if(processoLx == 0) {
