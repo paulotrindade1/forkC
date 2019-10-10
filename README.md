@@ -1,6 +1,6 @@
-# Multithreading Programming
+# Multiprocessing Programming
 
-A program that calculate functions using the concepts of threads.
+A program that calculate functions using the concepts of processes.
 
 To execute it, download the file 'fork.c' and run the follow command in the terminal:
 
